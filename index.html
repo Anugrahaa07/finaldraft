@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Silent Guardian</title>
+
+  <!-- ✅ LINK CSS (MUST BE HERE) -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <header>
+      <h1>🛡️AegiVox</h1>
+      <p class="subtitle">Accessible Safety Companion</p>
+    </header>
+
+    <!-- SOS SECTION -->
+    <section class="card sos-card">
+      <button id="sosBtn" class="sos-btn" onclick="toggleSOS()">
+        🚨 SOS
+      </button>
+
+      <p id="sosStatus" class="status-text">
+        Tap to activate emergency mode
+      </p>
+
+      <audio id="playback" controls></audio>
+    </section>
+
+    <!-- COMMUNICATION CARDS -->
+<section class="card">
+  <h2>🧩 Quick Communication</h2>
+
+  <div class="card-grid">
+    <button class="comm-card" onclick="useCard('I am scared')">
+      😟<span>I am scared</span>
+    </button>
+
+    <button class="comm-card" onclick="useCard('I need help')">
+      🚑<span>I need help</span>
+    </button>
+
+    <button class="comm-card" onclick="useCard('I am hurt')">
+      🤕<span>I am hurt</span>
+    </button>
+
+    <button class="comm-card" onclick="useCard('I want to go home')">
+      🏠<span>I want to go home</span>
+    </button>
+  </div>
+</section>
+
+
+    <!-- TEXT TO SPEECH SECTION -->
+    <section class="card">
+      <h2>🔊 Communicate</h2>
+
+      <textarea
+        id="ttsText"
+        placeholder="Type how you feel or what you need…"
+      ></textarea>
+
+      <button class="primary-btn" onclick="speakText()">
+        Speak
+      </button>
+    </section>
+
+  </div>
+
+  <!-- ✅ LINK JS (MUST BE LAST, BEFORE </body>) -->
+  <script src="app.js"></script>
+
+  <section class="medical-section" align="center">
+  <h2 align="center">🩺 Medical Information</h2>
+  <label>Enter Name</label>
+  <input id="name" placeholder="Name" />
+  <label>Enter Age</label>
+  <input id="age" placeholder="Age" />
+  <label>Enter Blood Group</label>
+  <input id="blood" placeholder="Blood Group" />
+  <label>Enter Medical Condition</label>
+  <input id="condition" placeholder="Medical Conditions" />
+  <label>Enter Allergy</label>
+  <input id="allergy" placeholder="Allergies" />
+  <label>Enter Contact</label>
+  <input id="contact" placeholder="Emergency Contact" />
+
+  <button onclick="saveMedicalInfo()">Save Medical Info</button>
+
+  <div id="medicalCard" class="medical-card hidden"></div>
+</section>
+
+<section class="mood-section" align="center">
+  <h2>😊 How are you feeling today?</h2>
+
+  <div class="mood-buttons" align="center">
+    <button onclick="saveMood('😊')">😊</button>
+    <button onclick="saveMood('😐')">😐</button>
+    <button onclick="saveMood('😢')">😢</button>
+    <button onclick="saveMood('😡')">😡</button>
+    <button onclick="saveMood('😨')">😨</button>
+  </div>
+
+  <button onclick="showMoodSummary()" style="background-color: rgb(175, 155, 194);border-radius: 5px;border:none">📊 View Monthly Mood</button>
+
+  <div id="moodResult"></div>
+</section>
+
+</body>
+</html>
