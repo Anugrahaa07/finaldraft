@@ -79,7 +79,7 @@ function getLocationAndSendSMS() {
         "This is my location:\n" +
         "https://maps.google.com/?q=" + lat + "," + lon;
 
-      const phoneNumber = "+91XXXXXXXXXX"; // caregiver number
+      const phoneNumber = "+918138852553"; // caregiver number
 
       window.location.href =
         "sms:" + phoneNumber + "?body=" + encodeURIComponent(message);
