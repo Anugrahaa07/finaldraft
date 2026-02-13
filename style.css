@@ -238,8 +238,12 @@ textarea {
   font-size: 2.3rem;
   font-weight: 800;
   letter-spacing: 1px;
+
   background: linear-gradient(90deg, #1976d2, #7c3aed);
   -webkit-background-clip: text;
+  background-clip: text;       /* add this for standard support */
   -webkit-text-fill-color: transparent;
+  text-fill-color: transparent; /* optional, some browsers */
   text-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
+
