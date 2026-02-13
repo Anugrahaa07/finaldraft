@@ -6,12 +6,6 @@ const sosBtn = document.getElementById("sosBtn");
 
 sosBtn.addEventListener("click", activateSOS);
 
-function activateSOS() {
-  document.body.classList.add("dark");   // screen goes dark
-  startRecording();                      // audio evidence
-  getLocationAndSendSMS();               // 📍 + SMS
-}
-
 
 function startRecording() {
   navigator.mediaDevices.getUserMedia({ audio: true })
@@ -69,7 +63,10 @@ function sendSOS(latitude, longitude) {
 }
 function getLocationAndSendSMS() {
   // Get the emergency number entered by the user
-  const phoneNumber = document.getElementById('contact').value;
+  const phoneNumber =
+  document.getElementById('contact').value ||
+  localStorage.getItem("emergencyContact");
+
   
   if (!phoneNumber) {
     alert("Please enter an emergency contact number!");
@@ -255,3 +252,24 @@ function saveMedicalInfo() {
 function getEmergencyContact() {
   return localStorage.getItem('emergencyContact') || "";
 }
+
+function saveEmergencyContact() {
+  const contact = document.getElementById("contact").value;
+
+  if (contact) {
+    localStorage.setItem("emergencyContact", contact);
+  }
+}
+
+window.onload = () => {
+
+  const savedContact = localStorage.getItem("emergencyContact");
+  if (savedContact) {
+    document.getElementById("contact").value = savedContact;
+  }
+
+  const savedAudio = localStorage.getItem("sos_audio");
+  if (savedAudio) {
+    document.getElementById("playback").src = savedAudio;
+  }
+};

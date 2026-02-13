@@ -36,7 +36,8 @@
         Tap to activate emergency mode
       </p>
         <label>Enter Contact</label>
-        <input id="contact" placeholder="Emergency Contact" />
+        <input id="contact" placeholder="Emergency Contact" oninput="saveEmergencyContact()" />
+
 
       <audio id="playback" controls></audio>
     </section>
@@ -96,7 +97,7 @@
   <label>Enter Allergy</label>
   <input id="allergy" placeholder="Allergies" />
   <label>Enter Contact</label>
-  <input id="contact" placeholder="Emergency Contact" />
+  <input id="Medical contact" placeholder="Emergency Contact" />
 
   <button onclick="saveMedicalInfo()">Save Medical Info</button>
 
