@@ -22,7 +22,7 @@
 
     <!-- HEADER -->
     <header>
-      <h1>🛡️AegiVox</h1>
+      <h1 class="logo">🛡️ AegiVox</h1>
       <p class="subtitle">Accessible Safety Companion</p>
     </header>
 
@@ -35,8 +35,11 @@
       <p id="sosStatus" class="status-text">
         Tap to activate emergency mode
       </p>
-        <label>Enter Contact</label>
-        <input id="contact" placeholder="Emergency Contact" oninput="saveEmergencyContact()" />
+       <div class="contact-box">
+        <label class="contact-label">Emergency Contact</label>
+        <input id="contact" placeholder="Enter phone number" oninput="saveEmergencyContact()" />
+      </div>
+
 
 
       <audio id="playback" controls></audio>
@@ -82,7 +85,7 @@
   </div>
 
   <!-- ✅ LINK JS (MUST BE LAST, BEFORE </body>) -->
-  <script src="app.js"></script>
+<script src="app.js?v=2"></script>
 
   <section class="medical-section" align="center">
   <h2 align="center">🩺 Medical Information</h2>
