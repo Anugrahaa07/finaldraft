@@ -1,10 +1,10 @@
 html, body, button, textarea, input {
-  font-family: "Alfa Slab One", Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Arial", Verdana, Geneva, Tahoma, sans-serif;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Alfa Slab One",Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Arial",Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
