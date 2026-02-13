@@ -7,22 +7,6 @@ const sosBtn = document.getElementById("sosBtn");
 sosBtn.addEventListener("click", activateSOS);
 
 
-function startRecording() {
-  navigator.mediaDevices.getUserMedia({ audio: true })
-    .then(stream => {
-      recorder = new MediaRecorder(stream);
-      recorder.start();
-
-      recorder.ondataavailable = e => audioChunks.push(e.data);
-      recorder.onstop = () => {
-        const audioBlob = new Blob(audioChunks);
-        console.log("Audio recorded:", audioBlob);
-      };
-    })
-    .catch(() => {
-      statusText.innerText = "Microphone access denied";
-    });
-}
 
 function getLocation() {
   navigator.geolocation.getCurrentPosition(
@@ -173,26 +157,7 @@ function saveRecording() {
     localStorage.setItem("sos_audio", reader.result);
   };
 }
-window.onload = () => {
-  const savedAudio = localStorage.getItem("sos_audio");
-  if (savedAudio) {
-    document.getElementById("playback").src = savedAudio;
-  }
-};
 
-function saveMedicalInfo() {
-  const medicalData = {
-    name: name.value,
-    age: age.value,
-    blood: blood.value,
-    condition: condition.value,
-    allergy: allergy.value,
-    contact: contact.value
-  };
-
-  localStorage.setItem("medicalInfo", JSON.stringify(medicalData));
-  alert("Medical info saved!");
-}
 
 function showMedicalInfo() {
   const data = JSON.parse(localStorage.getItem("medicalInfo"));
