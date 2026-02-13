@@ -68,6 +68,15 @@ function sendSOS(latitude, longitude) {
   });
 }
 function getLocationAndSendSMS() {
+  // Get the emergency number entered by the user
+  const phoneNumber = document.getElementById('contact').value;
+  
+  if (!phoneNumber) {
+    alert("Please enter an emergency contact number!");
+    return; // Stop if no number entered
+  }
+
+  // Get current location
   navigator.geolocation.getCurrentPosition(
     position => {
       const lat = position.coords.latitude;
@@ -79,16 +88,15 @@ function getLocationAndSendSMS() {
         "This is my location:\n" +
         "https://maps.google.com/?q=" + lat + "," + lon;
 
-      const phoneNumber = "+918138852553"; // caregiver number
-
-      window.location.href =
-        "sms:" + phoneNumber + "?body=" + encodeURIComponent(message);
+      // Open SMS app with prefilled message
+      window.location.href = "sms:" + phoneNumber + "?body=" + encodeURIComponent(message);
     },
     () => {
       alert("Location access denied");
     }
   );
 }
+
 function speakText() {
   const text = document.getElementById("ttsText").value;
 
@@ -224,4 +232,26 @@ function showMoodSummary() {
   }
 
   moodResult.innerHTML = summary || "No mood data yet";
+}
+
+function getEmergencyContact() {
+  const contact = document.getElementById('contact').value;
+  if (!contact) {
+    alert("Please enter an emergency contact number!");
+    return null;
+  }
+  return contact;
+}
+
+function saveMedicalInfo() {
+  const contact = document.getElementById('contact').value;
+  if (contact) {
+    localStorage.setItem('emergencyContact', contact);
+  }
+  alert("Medical info saved!");
+}
+
+// And when using SOS:
+function getEmergencyContact() {
+  return localStorage.getItem('emergencyContact') || "";
 }
