@@ -70,6 +70,7 @@ Additional Demos:
 [Add any extra demo materials/links]
 
 Team Contributions
+----------------------
 
 Anjana NK: JavaScript,HTML,CSS,Fixing the bugs
 
