@@ -49,38 +49,23 @@ Project Documentation
 --------------------
 
 Screenshots:
-![Screenshot1](Add screenshot 1 here)
-Shows the home screen and safety dashboard.
+<img wid<img width="1260" height="866" alt="Screenshot 2026-02-14 075027" src="https://github.com/user-attachments/assets/0dcaa196-7989-444f-a3f5-ed135098940a" />
+<img width="1386" height="928" alt="Screenshot 2026-02-14 075040" src="https://github.com/user-attachments/assets/23fc8e13-0c86-4ab2-a339-0adda8e6d04f" />
+<img width="1621" height="911" alt="Screenshot 2026-02-14 075016" src="https://github.com/user-attachments/assets/ae06e1e6-fcaf-4ec2-a6c0-ae80c92510a5" />
 
-![Screenshot2](Add screenshot 2 here)
-Demonstrates the alert system activating when danger is detected.
-
-![Screenshot3](Add screenshot 3 here)
-Displays accessible communication tools for non-verbal users.
 
 Architecture Diagrams:
 --------
 <img width="681" height="1043" alt="Screenshot 2026-02-14 061506" src="https://github.com/user-attachments/assets/c85ac8eb-fb62-4cdf-8248-318fc777a17f" />
 
-Build Photos:
-![Components](Add components photo here)
-List of all hardware components.
-
-![Build](Add build process photos)
-Step-by-step assembly process.
-
-![Final](Add final product photo)
-Final assembled product.
-
 Project Demo
 -------------
 
 Video:
-[Add demo video link here]
-Demonstrates the full app functionality, including alerts, audio recording, and communication tools.
 
-Additional Demos:
-[Add any extra demo materials/links]
+
+https://github.com/user-attachments/assets/4e934ca5-adf6-43fe-aba4-1f34922bec68
+
 
 Team Contributions
 ----------------------
