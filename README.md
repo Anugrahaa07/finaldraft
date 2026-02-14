@@ -36,16 +36,9 @@ Features
 Technical Details
 ------------------
 Software:
-Languages: JavaScript,HTML,CSS,Node.JS
-Tools: VS Code
+Languages: JavaScript,HTML,CSS.
+Tools: VS Code,canva for making flowchart
 
-Installation Commands
----------------------
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-nvm install --lts
-nvm install node
-nvm install 20
-node -v
 
 Project Documentation
 --------------------
