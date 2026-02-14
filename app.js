@@ -45,12 +45,9 @@ function sendSOS(latitude, longitude) {
   });
 }
 function getLocationAndSendSMS() {
-  // Get the emergency number entered by the user
-  const phoneNumber =
-  document.getElementById('contact').value ||
-  localStorage.getItem("emergencyContact");
-
-  
+  // Get emergency contacts
+  let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
+  let phoneNumber = contacts.length > 0 ? contacts[0] : document.getElementById('contact').value || localStorage.getItem("emergencyContact");
   if (!phoneNumber) {
     alert("Please enter an emergency contact number!");
     return; // Stop if no number entered
