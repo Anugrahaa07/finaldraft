@@ -26,11 +26,24 @@ The Solution
 
 Our app acts as a silent guardian: recording audio and instantly alerting trusted contacts and emergency services with location,while providing required medical information about the client. It also offers simple communication tools like icons, text-to-speech, and pre-set messages.
 
+Features
+----------
+1.Recording audio and send live GPS location to saved emergency contacts
+2.Save emergency contacts
+3.Provide Medical Information about the client including allergen advice
+4.Simple communication tools like icons,text to speech and pre-set messages
+
 Technical Details
 ------------------
 Software:
 Languages: JavaScript,HTML,CSS,Node.JS
 Tools: VS Code
+
+Installation Commands
+---------------------
+
+Run Commands
+--------------
 
 Project Documentation
 --------------------
@@ -45,7 +58,7 @@ Demonstrates the alert system activating when danger is detected.
 ![Screenshot3](Add screenshot 3 here)
 Displays accessible communication tools for non-verbal users.
 
-Diagrams:
+Architecture Diagrams:
 --------
 <img width="681" height="1043" alt="Screenshot 2026-02-14 061506" src="https://github.com/user-attachments/assets/c85ac8eb-fb62-4cdf-8248-318fc777a17f" />
 
