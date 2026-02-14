@@ -23,10 +23,12 @@ AegiVox, A smart safety application designed for autistic and disabled children.
   
 It discreetly detects danger, alerts emergency contacts, shares live location, captures audio evidence, and provides accessible communication tools for non-verbal or differently-abled users.
 
-The Problem
---------------
+The Problem ! Why we made it ?
+------------------‐-------------
 
 Children with autism and other disabilities face exploitation and heightened risks in emergencies due to communication challenges, sensory sensitivities, and delayed assistance. Existing safety apps are designed for neurotypical users and fail to address their unique needs.
+
+The reason for making this project is purely based on a real life event.The heartbreaking words of a mother prompted us to make this project.During a volunteering program for job fairs ,a mother came there for the purpose of finding job for her 32 year old autistic son.Having talked to her more about her life,we came to know that she used to live in Qatar and she had moved back to kerala recently.However the most striking remark that hit us deep to the core was her words "It was a terrible idea to come to Kerala,We shouldve stayed in Qatar itself".When we enquired more ,we came to know that her son was exploited badly and made to over work by his previous employers,also he was charged more for auto and taxi fares.This made us realize that this situation is pretty prevalent in kerala and having one of the residents say so themselves was truly heartbreaking .Hence we decided to build this app.
 
 The Solution
 ----------------
