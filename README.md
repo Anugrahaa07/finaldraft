@@ -55,8 +55,8 @@ Screenshots:
 
 
 Architecture Diagrams:
---------
-<img width="681" height="1043" alt="Screenshot 2026-02-14 061506" src="https://github.com/user-attachments/assets/c85ac8eb-fb62-4cdf-8248-318fc777a17f" />
+----
+<img width="1024" height="768" alt="flowchart aegivox" src="https://github.com/user-attachments/assets/6e17a842-6e8a-475d-a80e-97c165f24602" />
 
 Project Demo
 -------------
