@@ -23,8 +23,8 @@ AegiVox, A smart safety application designed for autistic and disabled children.
   
 It discreetly detects danger, alerts emergency contacts, shares live location, captures audio evidence, and provides accessible communication tools for non-verbal or differently-abled users.
 
-The Problem ! Why we made it ?
-------------------‐-------------
+The Problem ! Why we made it ?  
+------------------‐-------------  
 
 Children with autism and other disabilities face exploitation and heightened risks in emergencies due to communication challenges, sensory sensitivities, and delayed assistance. Existing safety apps are designed for neurotypical users and fail to address their unique needs.
 
@@ -48,9 +48,12 @@ Software:
 * Languages: JavaScript,HTML,CSS.  
 * Tools: VS Code,canva for making flowchart
 
-
-Project Documentation
---------------------
+Versel app link 
+--------------------- 
+https://finaldraft-anugraha-anils-projects.vercel.app?_vercel_share=fo2XB7EV3Hn9szVeNqder1h4eNwVeM2H  
+  
+Project Documentation  
+--------------------  
 
 Screenshots:
 <img wid<img width="1260" height="866" alt="Screenshot 2026-02-14 075027" src="https://github.com/user-attachments/assets/0dcaa196-7989-444f-a3f5-ed135098940a" />
