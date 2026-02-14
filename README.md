@@ -4,17 +4,24 @@
 
 AegiVox:
 -------------------
-Team Name: Bug
-
-Team Members:
-Member 1: Anugraha Anil - Department of Computer Science,Cochin University of Science and Technology
-
-Member 2: Anjana NK- Department of Computer Science,Cochin University of Science and Technology
-
-Project Description
+Team Name: Bug  
+  
+Team Members
+  
+Anugraha Anil  
+Department of Computer Science  
+Cochin University of Science and Technology  
+  
+Anjana NK  
+Department of Computer Science  
+Cochin University of Science and Technology   
+  
+Project Description  
 -------------------
 
-A smart safety application designed for autistic and disabled children. It discreetly detects danger, alerts emergency contacts, shares live location, captures audio evidence, and provides accessible communication tools for non-verbal or differently-abled users.
+AegiVox, A smart safety application designed for autistic and disabled children. 
+  
+It discreetly detects danger, alerts emergency contacts, shares live location, captures audio evidence, and provides accessible communication tools for non-verbal or differently-abled users.
 
 The Problem
 --------------
@@ -28,16 +35,16 @@ Our app acts as a silent guardian: recording audio and instantly alerting truste
 
 Features
 ----------
-1.Recording audio and send live GPS location to saved emergency contacts
-2.Save emergency contacts
-3.Provide Medical Information about the client including allergen advice
-4.Simple communication tools like icons,text to speech and pre-set messages
+1.Recording audio and send live GPS location to saved emergency contacts  
+2.Save emergency contacts  
+3.Provide Medical Information about the client including allergen advice  
+4.Simple communication tools like icons,text to speech and pre-set messages  
 
 Technical Details
 ------------------
-Software:
-Languages: JavaScript,HTML,CSS.
-Tools: VS Code,canva for making flowchart
+Software:  
+* Languages: JavaScript,HTML,CSS.  
+* Tools: VS Code,canva for making flowchart
 
 
 Project Documentation
