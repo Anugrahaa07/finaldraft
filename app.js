@@ -165,19 +165,27 @@ function saveMedicalInfo() {
   const blood = document.getElementById('blood').value;
   const condition = document.getElementById('condition').value;
   const allergy = document.getElementById('allergy').value;
-  let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
 
   const medicalInfo = {
     name,
     age,
     blood,
     condition,
-    allergy,
-    contacts
+    allergy
   };
   localStorage.setItem('medicalInfo', JSON.stringify(medicalInfo));
   alert("Medical info saved!");
-  //showMedicalInfo();
+  updateMedicalInputs();
+}
+
+function updateMedicalInputs() {
+  const data = JSON.parse(localStorage.getItem('medicalInfo'));
+  if (!data) return;
+  document.getElementById('name').value = data.name || '';
+  document.getElementById('age').value = data.age || '';
+  document.getElementById('blood').value = data.blood || '';
+  document.getElementById('condition').value = data.condition || '';
+  document.getElementById('allergy').value = data.allergy || '';
 }
 
 function showMedicalInfo() {
@@ -282,6 +290,8 @@ window.onload = () => {
     document.getElementById("playback").src = savedAudio;
   }
   updateContactList();
+  restoreMedicalInfo();
+  updateMedicalInputs();
   // Restore medical info
   //showMedicalInfo();
   showMoodSummary();
