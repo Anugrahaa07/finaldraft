@@ -12,23 +12,28 @@ Member 1: Anugraha Anil - Department of Computer Science,Cochin University of Sc
 Member 2: Anjana NK- Department of Computer Science,Cochin University of Science and Technology
 
 Project Description
+-------------------
 
 A smart safety application designed for autistic and disabled children. It discreetly detects danger, alerts emergency contacts, shares live location, captures audio evidence, and provides accessible communication tools for non-verbal or differently-abled users.
 
 The Problem
+--------------
 
 Children with autism and other disabilities face exploitation and heightened risks in emergencies due to communication challenges, sensory sensitivities, and delayed assistance. Existing safety apps are designed for neurotypical users and fail to address their unique needs.
 
-The Solution 
+The Solution
+----------------
 
 Our app acts as a silent guardian: recording audio and instantly alerting trusted contacts and emergency services with location,while providing required medical information about the client. It also offers simple communication tools like icons, text-to-speech, and pre-set messages.
 
 Technical Details
+------------------
 Software:
 Languages: JavaScript,HTML,CSS,Node.JS
 Tools: VS Code
 
 Project Documentation
+--------------------
 
 Screenshots:
 ![Screenshot1](Add screenshot 1 here)
@@ -41,7 +46,7 @@ Demonstrates the alert system activating when danger is detected.
 Displays accessible communication tools for non-verbal users.
 
 Diagrams:
--------------
+--------
 <img width="681" height="1043" alt="Screenshot 2026-02-14 061506" src="https://github.com/user-attachments/assets/c85ac8eb-fb62-4cdf-8248-318fc777a17f" />
 
 Build Photos:
@@ -55,6 +60,7 @@ Step-by-step assembly process.
 Final assembled product.
 
 Project Demo
+-------------
 
 Video:
 [Add demo video link here]
