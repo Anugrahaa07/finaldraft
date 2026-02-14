@@ -60,7 +60,7 @@ header h1 {
   height: 160px;
   border-radius: 50%;
   border: none;
-  background: #e53935;
+  background: #e6504d;
   color: white;
   font-size: 1.8rem;
   font-weight: bold;
@@ -152,19 +152,19 @@ textarea {
 /* MEDICAL INPUT STYLING */
 .medical-section input {
   width: 100%;
-  padding: 14px 16px;         /* more padding for comfort */
-  margin: 8px 0;              /* spacing between inputs */
+  padding: 14px 16px;        
+  margin: 8px 0;              
   font-size: 16px;
-  border-radius: 25px;        /* fully rounded */
-  border: 1px solid #ccc;     /* subtle border */
-  outline: none;              /* remove default focus outline */
-  transition: all 0.3s ease; /* smooth hover/focus transition */
+  border-radius: 25px;       
+  border: 1px solid #ccc;     
+  outline: none;              
+  transition: all 0.3s ease; 
 }
 
 /* Focus effect */
 .medical-section input:focus {
-  border-color: #e8b1d2;      /* blue border on focus */
-  box-shadow: 4px 4px 12px rgba(246, 167, 236, 0.745); /* subtle glow */
+  border-color: #e8b1d2;      
+  box-shadow: 4px 4px 12px rgba(246, 167, 236, 0.745); 
 }
 
 
