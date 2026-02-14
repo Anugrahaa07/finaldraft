@@ -1,7 +1,6 @@
 let recorder;
 //let audioChunks = [];
 
-sosBtn.addEventListener("click", activateSOS);
 const statusText = document.getElementById("status");
 const sosBtn = document.getElementById("sosBtn");
 // ...existing code...
