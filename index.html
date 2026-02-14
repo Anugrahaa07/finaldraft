@@ -36,10 +36,15 @@
       <p id="sosStatus" class="status-text">
         Tap to activate emergency mode
       </p>
-        <label>Enter Contact</label>
-        <input id="contact" placeholder="Emergency Contact" />
 
-      <audio id="playback" controls></audio>
+      <div class="contact-section">
+        <label for="contact">Emergency Contacts</label>
+        <input id="contact" placeholder="Add Emergency Contact" />
+        <button class="primary-btn" onclick="saveEmergencyContact()" style="margin-top:8px;">Save Emergency Contact</button>
+        <ul id="contactList" class="contact-list" style="margin-top:12px;padding-left:0;"></ul>
+      </div>
+
+      <audio id="playback" controls style="margin-top:16px;"></audio>
     </section>
 <!-- COMMUNICATION CARDS -->
 <section class="card">
@@ -96,10 +101,8 @@
   <input id="condition" placeholder="Medical Conditions" />
   <label>Enter Allergy</label>
   <input id="allergy" placeholder="Allergies" />
-  <label>Enter Contact</label>
-  <input id="contact" placeholder="Emergency Contact" />
 
-  <button onclick="saveMedicalInfo()">Save Medical Info</button>
+  <button class="primary-btn" onclick="saveMedicalInfo()" style="margin-top:8px;">Save Medical Info</button>
 
   <div id="medicalCard" class="medical-card hidden"></div>
 </section>

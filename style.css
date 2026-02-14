@@ -1,3 +1,95 @@
+/* Medical Info Section Styles */
+.medical-section {
+  background: #f6f7fa;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 24px auto 0 auto;
+  max-width: 420px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.medical-section label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+.medical-section input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+.medical-section .primary-btn {
+  width: 100%;
+  margin-top: 8px;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 10px 0;
+  box-shadow: 0 1px 4px rgba(108,99,255,0.08);
+  transition: background 0.2s;
+}
+.medical-section .primary-btn:hover {
+  background: #5548c8;
+}
+/* Emergency Contact Section Styles */
+.contact-section {
+  background: #f9f9fb;
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.contact-section label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+.contact-section input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.contact-list li {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.contact-list button {
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-list button[title='Edit'] {
+  background: #f1c40f;
+  color: #222;
+}
+.contact-list button[title='Delete'] {
+  background: #e74c3c;
+  color: #fff;
+}
 html, body, button, textarea, input {
    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
