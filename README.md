@@ -41,6 +41,7 @@ Demonstrates the alert system activating when danger is detected.
 Displays accessible communication tools for non-verbal users.
 
 Diagrams:
+-------------
 <img width="681" height="1043" alt="Screenshot 2026-02-14 061506" src="https://github.com/user-attachments/assets/c85ac8eb-fb62-4cdf-8248-318fc777a17f" />
 
 Build Photos:
