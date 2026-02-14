@@ -97,21 +97,15 @@ async function toggleSOS() {
   if (!sosActive) {
     startRecording();
     sosActive = true;
-
-    // 👇 ADD THIS HERE
-    document.getElementById("sosStatus").innerText =
-      "Recording audio evidence…";
-
+    document.getElementById("sosStatus").innerText = "Recording audio evidence…";
     document.getElementById("sosBtn").innerText = "🛑 STOP SOS";
+    document.getElementById("sendSmsBtn").style.display = "inline-block";
   } else {
     stopRecording();
     sosActive = false;
-
-    // 👇 AND THIS HERE
-    document.getElementById("sosStatus").innerText =
-      "Tap to activate emergency mode";
-
+    document.getElementById("sosStatus").innerText = "Tap to activate emergency mode";
     document.getElementById("sosBtn").innerText = "🚨 SOS";
+    document.getElementById("sendSmsBtn").style.display = "none";
   }
 }
 

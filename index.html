@@ -29,8 +29,12 @@
 
     <!-- SOS SECTION -->                                                                 
     <section class="card sos-card">
-      <button id="sosBtn" class="sos-btn" onclick="toggleSOS();getLocationAndSendSMS()">
+
+      <button id="sosBtn" class="sos-btn" onclick="toggleSOS()">
         🚨 SOS
+      </button>
+      <button id="sendSmsBtn" class="primary-btn" style="margin-top:10px;display:none;" onclick="getLocationAndSendSMS()">
+        Send Emergency SMS
       </button>
 
       <p id="sosStatus" class="status-text">
