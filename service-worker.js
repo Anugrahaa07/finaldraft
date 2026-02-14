@@ -5,7 +5,10 @@ self.addEventListener("install", event => {
         "index.html",
         "style.css",
         "app.js"
-      ]);
+        ]);
+        cache.addAll([
+          "manifest.json"
+        ]);
     })
   );
 });
