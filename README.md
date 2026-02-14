@@ -41,9 +41,11 @@ Tools: VS Code
 
 Installation Commands
 ---------------------
-
-Run Commands
---------------
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+nvm install --lts
+nvm install node
+nvm install 20
+node -v
 
 Project Documentation
 --------------------
@@ -60,9 +62,7 @@ Architecture Diagrams:
 
 Project Demo
 -------------
-
 Video:
-
 
 https://github.com/user-attachments/assets/4e934ca5-adf6-43fe-aba4-1f34922bec68
 
@@ -72,4 +72,4 @@ Team Contributions
 
 Anjana NK: JavaScript,HTML,CSS,Fixing the bugs
 
-Anugraha Anil:HTML,CSS,Testing the program
+Anugraha Anil: HTML,CSS,Testing the program
