@@ -159,41 +159,55 @@ function saveRecording() {
 }
 
 
-function showMedicalInfo() {
-  const data = JSON.parse(localStorage.getItem("medicalInfo"));
-  if (!data) return alert("No medical info found");
+function saveMedicalInfo() {
+  const name = document.getElementById('name').value;
+  const age = document.getElementById('age').value;
+  const blood = document.getElementById('blood').value;
+  const condition = document.getElementById('condition').value;
+  const allergy = document.getElementById('allergy').value;
+  let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
 
-  medicalCard.innerHTML = `
-    <h3>🚑 Emergency Medical Info</h3>
-    <p><b>Name:</b> ${data.name}</p>
-    <p><b>Age:</b> ${data.age}</p>
-    <p><b>Blood Group:</b> ${data.blood}</p>
-    <p><b>Condition:</b> ${data.condition}</p>
-    <p><b>Allergies:</b> ${data.allergy}</p>
-    <p><b>Contact:</b> ${data.contact}</p>
-  `;
-
-  medicalCard.classList.remove("hidden");
+  const medicalInfo = {
+    name,
+    age,
+    blood,
+    condition,
+    allergy,
+    contacts
+  };
+  localStorage.setItem('medicalInfo', JSON.stringify(medicalInfo));
+  alert("Medical info saved!");
+  //showMedicalInfo();
 }
- function saveMood(mood) {
-  const today = new Date().toISOString().slice(0, 10);
+
+function showMedicalInfo() {
+  // No display box, just keep data in localStorage
+}
+
+function saveMood(mood) {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const dateStr = `${yyyy}-${mm}-${dd}`;
   let moods = JSON.parse(localStorage.getItem("moods")) || {};
-
-  moods[today] = mood;
+  moods[dateStr] = mood;
   localStorage.setItem("moods", JSON.stringify(moods));
-
   alert("Mood saved!");
+  showMoodSummary();
 }
 
 function showMoodSummary() {
   let moods = JSON.parse(localStorage.getItem("moods")) || {};
-  let summary = "";
-
+  let summary = "<table style='width:100%;border-collapse:collapse;'>";
+  summary += "<tr><th style='text-align:left;'>Date</th><th style='text-align:left;'>Mood</th></tr>";
+  let hasData = false;
   for (let date in moods) {
-    summary += `${date}: ${moods[date]}<br>`;
+    summary += `<tr><td>${date}</td><td style='font-size:2rem;'>${moods[date]}</td></tr>`;
+    hasData = true;
   }
-
-  moodResult.innerHTML = summary || "No mood data yet";
+  summary += "</table>";
+  moodResult.innerHTML = hasData ? summary : "<span style='color:#888;'>No mood data yet</span>";
 }
 
 function getEmergencyContact() {
@@ -205,25 +219,55 @@ function getEmergencyContact() {
   return contact;
 }
 
-function saveMedicalInfo() {
-  const contact = document.getElementById('contact').value;
-  if (contact) {
-    localStorage.setItem('emergencyContact', contact);
-  }
-  alert("Medical info saved!");
-}
-
-// And when using SOS:
-function getEmergencyContact() {
-  return localStorage.getItem('emergencyContact') || "";
-}
-
 function saveEmergencyContact() {
   const contact = document.getElementById("contact").value;
-
-  if (contact) {
-    localStorage.setItem("emergencyContact", contact);
+  if (!contact) {
+    alert("Please enter an emergency contact number!");
+    return;
   }
+  let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
+  if (contacts.includes(contact)) {
+    alert("Contact already saved!");
+    updateContactList();
+    return;
+  }
+  contacts.push(contact);
+  localStorage.setItem("emergencyContacts", JSON.stringify(contacts));
+  updateContactList();
+  alert("Emergency contact saved!");
+}
+
+function updateContactList() {
+  let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
+  const list = document.getElementById("contactList");
+  if (!list) return;
+  if (contacts.length === 0) {
+    list.innerHTML = '<li style="color:#888;">No emergency contacts saved.</li>';
+    return;
+  }
+  list.innerHTML = contacts.map((c, i) => `
+    <li style="display:flex;align-items:center;gap:8px;">
+      <span style="flex:1;">${c}</span>
+      <button onclick='editContact(${i})' title='Edit' style='background:#f1c40f;border:none;border-radius:4px;padding:4px 8px;cursor:pointer;color:#222;font-weight:600;'>✏️</button>
+      <button onclick='deleteContact(${i})' title='Delete' style='background:#e74c3c;border:none;border-radius:4px;padding:4px 8px;cursor:pointer;color:#fff;font-weight:600;'>🗑️</button>
+    </li>`).join("");
+}
+
+function editContact(index) {
+  let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
+  const newContact = prompt("Edit contact:", contacts[index]);
+  if (newContact && newContact.trim()) {
+    contacts[index] = newContact.trim();
+    localStorage.setItem("emergencyContacts", JSON.stringify(contacts));
+    updateContactList();
+  }
+}
+
+function deleteContact(index) {
+  let contacts = JSON.parse(localStorage.getItem("emergencyContacts")) || [];
+  contacts.splice(index, 1);
+  localStorage.setItem("emergencyContacts", JSON.stringify(contacts));
+  updateContactList();
 }
 
 window.onload = () => {
@@ -237,4 +281,8 @@ window.onload = () => {
   if (savedAudio) {
     document.getElementById("playback").src = savedAudio;
   }
+  updateContactList();
+  // Restore medical info
+  //showMedicalInfo();
+  showMoodSummary();
 };
